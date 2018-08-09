@@ -1,0 +1,19 @@
+-*- coding:utf-8 -*-
+
+'''
+使用python的matplotlib模块画出常见的不同的函数图像
+"""
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 生成一个等差数列
+x=np.linspace(-10,10,30)
+y=x**2+3*x-2
+# 画出函数曲线
+plt.plot(x,y)
+# 在图中添加出一个特殊的点 (0,0)
+plt.plot(0,0,marker='o')
+plt.plot(0,3,marker='o',color='red')
+# 在图中添加一条特殊的线
+plt.plot((0,3),(0,3),linestyle='--')
+plt.show()
